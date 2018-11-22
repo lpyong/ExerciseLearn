@@ -1,13 +1,11 @@
 package cn.lipy.algorithms.chapter202;
 
-
 import java.util.Comparator;
 
 /**
  * Created by lipyong on 2018/11/22.
- *插入排序，将插入元素后面的元素向后面移动一位
  */
-public class InsertSort {
+public class SelectSort {
     public static  void  sort (Comparable[] a){
         int N= a.length;
         for (int i=1;i<N;i++){
@@ -34,5 +32,7 @@ public class InsertSort {
         a[i] = a[j];
         a[j] = swap;
     }
+
+}
 
 }
