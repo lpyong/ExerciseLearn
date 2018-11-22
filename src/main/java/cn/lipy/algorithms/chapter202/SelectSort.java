@@ -4,15 +4,21 @@ import java.util.Comparator;
 
 /**
  * Created by lipyong on 2018/11/22.
+ * 选择排序 选出做小的放在首个位置
+ *
  */
+
 public class SelectSort {
-    public static  void  sort (Comparable[] a){
-        int N= a.length;
-        for (int i=1;i<N;i++){
-            for (int j=i;j>0&&(less(a[j],a[j-1]));j--){
-                exch(a,j,j-1);
+    public static  void  sort (Comparable[] a) {
+        int N = a.length;
+        for (int i = 0; i < N; i++) {
+            int min = i;
+            for (int j = i + 1; j < N; j++) {
+                if (less(a[j], a[i])) min = j; //最小元素的索引
+                exch(a, i, min);
 
             }
+
         }
     }
     // is v < w ?
@@ -35,4 +41,4 @@ public class SelectSort {
 
 }
 
-}
+
