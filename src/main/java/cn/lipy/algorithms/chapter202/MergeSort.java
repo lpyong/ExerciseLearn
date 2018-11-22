@@ -1,5 +1,6 @@
 package cn.lipy.algorithms.chapter202;
 
+import java.util.Arrays;
 import java.util.Comparator;
 
 /**
@@ -7,23 +8,23 @@ import java.util.Comparator;
  */
 public class MergeSort {
 
-    public static  void  merge(Comparable[] a,int lo ,int mid , int hi )
-    {
+    public static  void  merge(Comparable[] a,int lo ,int mid , int hi ) {
 //     将a[lo..mid] 和 a[mid..hi]归并
-        int i =lo;
-        int j= mid+1;
-        Comparable [] aux = new Comparable[];
+        int i = lo;
+        int j = mid + 1;
+
 //        将a数组复制为aux数组
-        for(int k =lo;k<=hi;k++)
-        {
-            aux[k]=a[k];
-        }
-        for (int k=lo;k<=hi;k++){
-            if (i>mid) a[k]=aux[j++];
-            else if (j>hi) a[k]=aux[i++];
-            else if (less(aux[j],a[i])) a[k]=aux[j++];
-            else                      a[k] =aux[i++];
-        }
+//        for(int k =lo;k<=hi;k++)
+//        {
+////            aux[k]=a[k];
+////        }
+////        for (int k=lo;k<=hi;k++){
+////            if (i>mid) a[k]=aux[j++];
+////            else if (j>hi) a[k]=aux[i++];
+////            else if (less(aux[j],a[i])) a[k]=aux[j++];
+////            else                      a[k] =aux[i++];
+////        }
+//    }
     }
     // is v < w ?
     private static boolean less(Comparable v, Comparable w) {
