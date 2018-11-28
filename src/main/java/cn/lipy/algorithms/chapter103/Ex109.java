@@ -13,7 +13,7 @@ public class Ex109 {
         Stack<String> vals = new Stack<String>();
         while (!StdIn.isEmpty()) {
             String s = StdIn.readString();
-            if (s.equals("(")) ;
+            if (s.equals("(")||s.equals(")")) ;
             else if (s.equals("+")) ops.push(s);
             else if (s.equals("-")) ops.push(s);
             else if (s.equals("*")) ops.push(s);
